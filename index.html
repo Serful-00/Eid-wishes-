@@ -1,0 +1,65 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ঈদ মোবারক</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- প্রথম পেজ -->
+    <div class="input-page" id="inputPage">
+        <div class="container">
+            <h1>ঈদের শুভেচ্ছা</h1>
+            <form onsubmit="showGreeting(event)">
+                <input type="text" placeholder="আপনার নাম লিখুন" required>
+                <button type="submit">❤️</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- দ্বিতীয় পেজ -->
+    <div class="greeting-page" id="greetingPage">
+        <div class="border-container">
+            <div class="marquee-top">ঈদ মোবারক</div>
+            
+            <div class="side-text left">
+                <span>E</span><span>I</span><span>D</span><br>
+                <span>M</span><span>U</span><span>B</span><span>A</span><span>R</span><span>A</span><span>K</span>
+            </div>
+            
+            <div class="main-content">
+                <h1 class="greeting-text">আসসালামু আলাইকুম</h1>
+                <div class="mosque-gif"></div>
+                <p class="personal-greeting" id="userName"></p>
+                
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="side-text right">
+                <span>E</span><span>I</span><span>D</span><br>
+                <span>M</span><span>U</span><span>B</span><span>A</span><span>R</span><span>A</span><span>K</span>
+            </div>
+            
+            <div class="marquee-bottom">ঈদ মোবারক</div>
+        </div>
+    </div>
+
+    <script>
+        function showGreeting(event) {
+            event.preventDefault();
+            const name = document.querySelector('input').value;
+            document.getElementById('userName').innerHTML = `${name}, আপনাকে ঈদের শুভেচ্ছা রইল!`;
+            document.getElementById('inputPage').style.display = 'none';
+            document.getElementById('greetingPage').style.display = 'block';
+        }
+    </script>
+</body>
+  </html>
