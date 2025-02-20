@@ -1,0 +1,169 @@
+
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kalpurush', Arial, sans-serif;
+    background: #000;
+}
+
+/* প্রথম পেজ স্টাইল */
+.input-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a237e, #0d47a1);
+}
+
+.container {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+input {
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    border: 2px solid #1a237e;
+    border-radius: 25px;
+    margin: 20px 0;
+    width: 300px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 10px #1a237e;
+}
+
+button {
+    background: #e91e63;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background: #c2185b;
+}
+
+/* দ্বিতীয় পেজ স্টাইল */
+.greeting-page {
+    display: none;
+    color: #fff;
+    padding: 30px;
+}
+
+.border-container {
+    border: 2px solid #2196F3;
+    min-height: 95vh;
+    position: relative;
+    margin: 10px;
+}
+
+.marquee-top, .marquee-bottom {
+    background: #000;
+    padding: 10px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    font-size: 1.5rem;
+    color: #2196F3;
+}
+
+.marquee-top {
+    animation: marquee 15s linear infinite;
+    top: 0;
+}
+
+.marquee-bottom {
+    animation: marquee 15s linear infinite reverse;
+    bottom: 0;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+.side-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    writing-mode: vertical-rl;
+    font-size: 1.2rem;
+    color: #2196F3;
+    padding: 10px;
+}
+
+.side-text.left {
+    left: 0;
+}
+
+.side-text.right {
+    right: 0;
+}
+
+.main-content {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.greeting-text {
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+    background: linear-gradient(45deg, #4CAF50, #FFEB3B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.mosque-gif {
+    height: 200px;
+    background: url('https://i.pinimg.com/originals/15/4e/aa/154eaa0f0b5a9f8e0d6a897e4e9df7b5.gif') center/contain no-repeat;
+    margin: 20px auto;
+}
+
+.personal-greeting {
+    font-size: 1.8rem;
+    margin: 20px 0;
+    color: #FFC107;
+}
+
+.social-icons {
+    margin-top: 50px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 2rem;
+    margin: 0 15px;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #2196F3;
+    transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+    .side-text {
+        display: none;
+    }
+    
+    .greeting-text {
+        font-size: 2.5rem;
+    }
+}
