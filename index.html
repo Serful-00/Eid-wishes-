@@ -26,26 +26,47 @@
             <div class="marquee-top">ঈদ মোবারক</div>
             
             <div class="side-text left">
-                <span>E</span><span>I</span><span>D</span><br>
-                <span>M</span><span>U</span><span>B</span><span>A</span><span>R</span><span>A</span><span>K</span>
+                <div class="vertical-marquee">
+                    <span>E</span>
+                    <span>I</span>
+                    <span>D</span>
+                    <span>M</span>
+                    <span>U</span>
+                    <span>B</span>
+                    <span>A</span>
+                    <span>R</span>
+                    <span>A</span>
+                    <span>K</span>
+                </div>
             </div>
             
             <div class="main-content">
                 <h1 class="greeting-text">আসসালামু আলাইকুম</h1>
                 <div class="mosque-gif"></div>
-                <p class="personal-greeting" id="userName"></p>
+                <h2 class="user-name" id="userName"></h2>
+                <p class="greeting-message">আপনাকে ঈদের শুভেচ্ছা রইল!</p>
                 
                 <div class="social-icons">
-                    <a href="#"><i class="fab fa-whatsapp"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="https://api.whatsapp.com/send?text=ঈদ%20মোবারক%20শুভেচ্ছা%20কার্ড:%20" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=example.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/share?url=example.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/intent/tweet?text=ঈদ%20মোবারক%20শুভেচ্ছা%20কার্ড:%20example.com" target="_blank"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
 
             <div class="side-text right">
-                <span>E</span><span>I</span><span>D</span><br>
-                <span>M</span><span>U</span><span>B</span><span>A</span><span>R</span><span>A</span><span>K</span>
+                <div class="vertical-marquee">
+                    <span>E</span>
+                    <span>I</span>
+                    <span>D</span>
+                    <span>M</span>
+                    <span>U</span>
+                    <span>B</span>
+                    <span>A</span>
+                    <span>R</span>
+                    <span>A</span>
+                    <span>K</span>
+                </div>
             </div>
             
             <div class="marquee-bottom">ঈদ মোবারক</div>
@@ -56,10 +77,10 @@
         function showGreeting(event) {
             event.preventDefault();
             const name = document.querySelector('input').value;
-            document.getElementById('userName').innerHTML = `${name}, আপনাকে ঈদের শুভেচ্ছা রইল!`;
+            document.getElementById('userName').innerHTML = `${name}`;
             document.getElementById('inputPage').style.display = 'none';
             document.getElementById('greetingPage').style.display = 'block';
         }
     </script>
 </body>
-  </html>
+    </html>
