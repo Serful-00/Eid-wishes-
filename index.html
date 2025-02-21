@@ -13,7 +13,7 @@
     <div class="input-page" id="inputPage">
         <div class="container">
             <h1>ঈদের শুভেচ্ছা</h1>
-            <form onsubmit="showGreeting(event)">
+            <form id="nameForm">
                 <input type="text" placeholder="আপনার নাম লিখুন" required>
                 <button type="submit">❤️</button>
             </form>
@@ -47,10 +47,10 @@
                 <p class="greeting-message">আপনাকে ঈদের শুভেচ্ছা রইল!</p>
                 
                 <div class="social-icons">
-                    <a href="https://api.whatsapp.com/send?text=ঈদ%20মোবারক%20শুভেচ্ছা%20কার্ড:%20" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=example.com" target="_blank"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/share?url=example.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://twitter.com/intent/tweet?text=ঈদ%20মোবারক%20শুভেচ্ছা%20কার্ড:%20example.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" id="whatsappShare"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" id="facebookShare"><i class="fab fa-facebook"></i></a>
+                    <a href="#" id="instagramShare"><i class="fab fa-instagram"></i></a>
+                    <a href="#" id="twitterShare"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
 
@@ -73,14 +73,6 @@
         </div>
     </div>
 
-    <script>
-        function showGreeting(event) {
-            event.preventDefault();
-            const name = document.querySelector('input').value;
-            document.getElementById('userName').innerHTML = `${name}`;
-            document.getElementById('inputPage').style.display = 'none';
-            document.getElementById('greetingPage').style.display = 'block';
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
     </html>
